@@ -23,7 +23,7 @@ class BlogController extends Controller
             ->orderBy('published_at', 'desc')
             ->limit($request->get('limit', 3))
             ->get();
-
+            dd($blogs->toSql());
         return response()->json($blogs);
     }
 
