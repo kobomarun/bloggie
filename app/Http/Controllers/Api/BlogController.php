@@ -13,18 +13,20 @@ class BlogController extends Controller
 
     public function featured(Request $request) : JsonResponse
     {
-        $now = Carbon::now();
+        $$now = Carbon::now();
         $blogs = Blog::whereNotNull('featured_at')
             ->where('featured_at', '<=', $now)
             ->where('published_at', '<=', $now)
             ->where(function ($subquery) use ($now) {
                 return $subquery->where('expired_at', '>', $now)->orWhereNull('expired_at');
             })
-            ->orderBy('published_at', 'desc')
+            // I Changed 'published_at' to 'featured_at' and 'asc' to 'desc' in the code below to order the "Featured Blogs" by the most recent,
+            ->orderBy('featured_at', 'desc') 
             ->limit($request->get('limit', 3))
             ->get();
-            dd($blogs->toSql());
+        
         return response()->json($blogs);
+        
     }
 
     public function latest(Request $request) : JsonResponse
