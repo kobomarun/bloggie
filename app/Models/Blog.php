@@ -21,6 +21,7 @@ class Blog extends Model
         'published_at',
         'slug',
         'title',
+        'expired_at'
     ];
 
     /**
