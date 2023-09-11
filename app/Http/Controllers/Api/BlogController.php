@@ -30,11 +30,12 @@ class BlogController extends Controller
     public function latest(Request $request) : JsonResponse
     {
         $now = Carbon::now();
+        $getLimit = min($request->get('limit',3),3);
         $blogs = Blog::where(function ($subquery) use ($now) {
                 return $subquery->where('expired_at', '>', $now)->orWhereNull('expired_at');
             })
             ->orderBy('published_at', 'desc')
-            ->limit($request->get('limit', 3))
+            ->limit($getLimit)
             ->get();
 
         return response()->json($blogs);
