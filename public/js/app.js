@@ -5019,7 +5019,6 @@ __webpack_require__.r(__webpack_exports__);
     loadBlogs: function loadBlogs() {
       var _this = this;
       axios.get('/api/blog/latest?limit=7').then(function (response) {
-        console.log(response.data);
         _this.blogs = response.data;
       })["catch"](function (e) {
         console.error('Failed to load blog posts');

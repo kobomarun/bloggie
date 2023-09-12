@@ -35,7 +35,6 @@
                 axios.get(
                     '/api/blog/latest?limit=7',
                 ).then(response => {
-                    console.log(response.data)
                     this.blogs = response.data;
                 }).catch(e => {
                     console.error('Failed to load blog posts');
