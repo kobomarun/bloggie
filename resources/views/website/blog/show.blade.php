@@ -12,6 +12,7 @@
                         <h2 class="text-white">
                             {{ $blog->published_at ? $blog->published_at->diffForHumans() : '' }}
                         </h2>
+                       
                     </div>
                 </div>
             </div>
@@ -33,6 +34,9 @@
 
         <p class="py-4">
             {{ $blog->main_content }}
+        </p>
+        <p class="text-black py-2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore culpa nulla numquam facilis? Placeat tempore, consectetur autem numquam atque maiores deserunt, fuga architecto hic natus, soluta quam mollitia similique facilis.
         </p>
     </div>
 
