@@ -1,5 +1,8 @@
 <template>
     <div class="card h-100 p-4">
+        <h3 class="mb-4 text-lg text-white">
+                Testimonials
+            </h3>
         <p class="text-center font-weight-bold">
             {{ testimonial.message }}
         </p>

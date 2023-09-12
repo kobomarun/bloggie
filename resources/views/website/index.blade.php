@@ -47,5 +47,7 @@
 
 
     <featured-blogs></featured-blogs>
+    <testimonial-card></testimonial-card>
     <latest-blogs></latest-blogs>
+    
 @endsection
