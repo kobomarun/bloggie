@@ -28,4 +28,5 @@
             {{ $testimonials->links() }}
         </div>
     </div>
+    <latest-blogs></latest-blogs>
 @endsection
