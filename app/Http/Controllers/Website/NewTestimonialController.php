@@ -10,7 +10,7 @@ class NewTestimonialController extends Controller
     public function index()
     {
         $testimonials = Testimonial::orderBy('rating', 'desc')->paginate(20);
-
+        
         return view('website.testimonial.index')->with([
             'testimonials' => $testimonials
         ]);
