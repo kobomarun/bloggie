@@ -30,7 +30,7 @@
                 <div>
                     <a
                         class="btn btn-primary mt-4"
-                        :href="`/blog/${blog.id}`"
+                        :href="`/blog/${blog.slug}`"
                     >
                         View Blog
                     </a>
