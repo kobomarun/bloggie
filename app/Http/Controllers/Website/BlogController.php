@@ -26,12 +26,4 @@ class BlogController extends Controller
         ]);
     }
 
-    // public function showPost($id)
-    // {
-    //     $blog = Blog::find($id);
-    //     return view('website.blog.show')->with([
-    //         'blog' => $blog
-    //     ]);
-    // }
-
 }
