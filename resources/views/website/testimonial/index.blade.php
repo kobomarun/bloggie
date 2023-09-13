@@ -17,7 +17,7 @@
 
     <div class="container my-4">
         @foreach ($testimonials as $testimonial)
-        {{dd($testimonials)}}
+    
         <testimonial-card
                 class="mb-4 shadow-sm"
                 :testimonial="{{ json_encode($testimonial->toArray()) }}"
